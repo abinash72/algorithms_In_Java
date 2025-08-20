@@ -12,14 +12,20 @@ public class MatrixBoundaryTraversal {
         matrixboundarytraversal(arr);
     }
 
+    // only applicable when it is a N x N matrix
     private static void matrixboundarytraversal(int[][] arr){
         int row = arr.length;
+        int col = arr[0].length;
 
-        if(row == 1){
-            for(int i=0; i<arr[row].length; i++){
+        if(row == 1){// if there is only one row
+            for(int i=0; i<arr[0].length; i++){
                 System.out.print(arr[0][i]+" ");
             }
-        }else{
+        }else if(col == 1){// if there is only one column
+            for(int i=0; i< row;i++){
+                System.out.println(arr[0][i]+" ");
+            }
+        } else{
             for(int i=0; i < arr[0].length; i++){
                 System.out.print(arr[0][i]+" ");
             }
